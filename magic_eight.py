@@ -1,11 +1,8 @@
 import random
 
 def question():
-	answer = input("What is your question?")
+	answer = input("What is your question? ")
 	return answer
-
-answer = question()
-print(answer)
 
 def random_fortune():
 	responses = [
@@ -39,17 +36,15 @@ def pick_answer():
 					"Don't count on it","My reply is no","My sources say no","Outlook not so good","Very doubtful"]
 	return(random.choice(ten_answersC))
 
-
-response = random_fortune()
-print(response)
-
-response2 = pick_answer()
-print(response2)
-
 def check_question():
-	answer = ""
+	answer = question()
 
 	while answer != "quit":
-		answer = question()
 		if answer[-1] != "?":
-			print("I’m sorry, I can only answer questions.")
+			print("I’m sorry, I can only answer questions.\n")
+		else:
+			print(random_fortune(),"\n")
+		answer = question()
+
+
+check_question()
