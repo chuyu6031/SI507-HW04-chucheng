@@ -45,3 +45,11 @@ print(response)
 
 response2 = pick_answer()
 print(response2)
+
+def check_question():
+	answer = ""
+
+	while answer != "quit":
+		answer = question()
+		if answer[-1] != "?":
+			print("I’m sorry, I can only answer questions.")
